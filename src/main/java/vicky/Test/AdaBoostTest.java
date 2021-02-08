@@ -13,7 +13,6 @@ public class AdaBoostTest {
         String filePath = "C:\\Users\\sdc\\Desktop\\DataMiningAlgorithm-master\\BaggingAndBoosting\\DataMining_AdaBoost\\input.txt";
         //Îó²îÂÊãÐÖµ
         double errorValue = 0.2;
-
         AdaBoostTool tool = new AdaBoostTool(filePath, errorValue);
         tool.adaBoostClassify();
     }
