@@ -1,13 +1,18 @@
-package vicky.MLSVM;
+package vicky.ML.SVM;
 
-class ONE_CLASS_Q extends Kernel
+//
+// Q matrices for various formulations
+//
+class SVC_Q extends Kernel
 {
+    private final byte[] y;
     private final Cache cache;
     private final float[] QD;
 
-    ONE_CLASS_Q(svm_problem prob, svm_parameter param)
+    SVC_Q(svm_problem prob, svm_parameter param, byte[] y_)
     {
         super(prob.l, prob.x, param);
+        y = (byte[])y_.clone();
         cache = new Cache(prob.l,(long)(param.cache_size*(1<<20)));
         QD = new float[prob.l];
         for(int i=0;i<prob.l;i++)
@@ -21,7 +26,7 @@ class ONE_CLASS_Q extends Kernel
         if((start = cache.get_data(i,data,len)) < len)
         {
             for(j=start;j<len;j++)
-                data[0][j] = (float)kernel_function(i,j);
+                data[0][j] = (float)(y[i]*y[j]*kernel_function(i,j));
         }
         return data[0];
     }
@@ -35,6 +40,7 @@ class ONE_CLASS_Q extends Kernel
     {
         cache.swap_index(i,j);
         super.swap_index(i,j);
+        do {byte _=y[i]; y[i]=y[j]; y[j]=_;} while(false);
         do {float _=QD[i]; QD[i]=QD[j]; QD[j]=_;} while(false);
     }
 }

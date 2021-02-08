@@ -1,4 +1,4 @@
-package vicky.MLSVM;
+package vicky.ML.SVM;
 
 import java.io.*;
 import java.util.StringTokenizer;

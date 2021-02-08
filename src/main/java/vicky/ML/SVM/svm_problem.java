@@ -1,4 +1,4 @@
-package vicky.MLSVM;
+package vicky.ML.SVM;
 
 /**
  * 包含了训练集数据的基本信息

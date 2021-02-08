@@ -1,4 +1,4 @@
-package vicky.MLSVM;
+package vicky.ML.SVM;
 
 abstract class Kernel extends QMatrix {
 

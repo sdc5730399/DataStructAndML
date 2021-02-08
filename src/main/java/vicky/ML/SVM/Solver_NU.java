@@ -1,4 +1,4 @@
-package vicky.MLSVM;
+package vicky.ML.SVM;
 
 //
 // Solver for nu-svm classification and regression

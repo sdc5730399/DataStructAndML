@@ -1,4 +1,4 @@
-package vicky.MLSVM;
+package vicky.ML.SVM;
 
 // An SMO algorithm in Fan et al., JMLR 6(2005), p. 1889--1918
 // Solves:

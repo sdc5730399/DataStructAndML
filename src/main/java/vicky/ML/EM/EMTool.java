@@ -1,4 +1,4 @@
-package vicky.MLEM;
+package vicky.ML.EM;
 
 import java.io.BufferedReader;
 import java.io.File;

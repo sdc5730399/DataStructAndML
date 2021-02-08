@@ -1,4 +1,4 @@
-package vicky.MLSVM;
+package vicky.ML.SVM;
 
 
 public class svm_parameter implements Cloneable,java.io.Serializable

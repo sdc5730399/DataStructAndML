@@ -1,4 +1,4 @@
-package vicky.DSSort;
+package vicky.DS.Sort;
 /*
       sdc  ≤Â÷µ≈≈–Ú
  */
